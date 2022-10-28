@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Imagens/Favicon.ico" type="image/x-icon">
+    <title>Jardineiro Virtual</title>
+
+</head>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lexend+Deca:wght@600&family=Macondo&family=Nunito:wght@300&display=swap');
+
+*{
+    font-family      : Lexend Deca;
+    padding          : 0px;
+    margin           : 0px;
+}
+    
+.container{
+    background-color : #8fb9aa;
+    justify-content  : center;
+    align-items      : center;
+    display          : flex;
+    height           : 100vh;
+    width            : 100vw;
+}
+
+main{
+    background-position : center;
+    background-image : url(Imagens/Fundo.jpg);
+    border-radius    : 100px;
+    box-shadow       : 0px 0px 40px #2e2e2f;
+    padding          : 30px;
+    height           : 550px;
+    margin           : 30px;
+    width            : 1000px;
+}
+
+h1{
+    margin-bottom    : 30px;
+    text-align       : center;
+    font-size        : 50px;
+    color            : #2e2e2f;
+}
+
+.dados{
+    justify-content  : center;
+    display          : flex;
+}
+
+.monitores{
+    display          : flex;
+    height           : 280px;
+}
+
+.temperatura{
+    background-color : #9ab3a5;
+    justify-content  : center;
+    border-radius    : 50%;
+    align-items      : center;
+    box-shadow       : 0px 0px 10px green;
+    text-align       : center;
+    font-size        : 45px;
+    display          : flex;
+    border           : 20px solid mediumseagreen;
+    margin           : 20px 30px;
+    height           : 200px;
+    color            : #1ca95b;
+    width            : 200px;
+}
+
+.umidade{
+    background-color : #c1e7ff;
+    justify-content  : center;
+    border-radius    : 50%;
+    align-items      : center;
+    box-shadow       : 0px 0px 10px #25a1ff;
+    text-align       : center;
+    font-size        : 45px;
+    display          : flex;
+    border           : 20px solid #67c3fd;
+    margin           : 20px 30px;
+    height           : 200px;
+    color            : #3db3fd;
+    width            : 200px;
+}
+
+.situacao{
+    background-color : #c1e7ff;
+    justify-content  : center;
+    border-radius    : 50%;
+    align-items      : center;
+    box-shadow       : 0px 0px 10px #25a1ff;
+    text-align       : center;
+    font-size        : 45px;
+    display          : flex;
+    border           : 20px solid #67c3fd;
+    margin           : 20px 30px;
+    height           : 200px;
+    color            : #3db3fd;
+    width            : 200px;
+}
+
+p{
+    text-align       : center;
+    font-size        : 25px;
+    color            : #2e2e2f;
+}
+
+</style>
+
+<body>
+
+    <div class="container">
+
+        <main>
+
+            <h1>Jardineiro Virtual</h1>
+
+            <div class="dados">
+                
+                <div class="monitores">
+
+                    <div class="umitempsit">
+
+                        <p>Temperatura</p>
+
+                        <div class="temperatura">
+
+                            <script>
+    
+                                var temperatura = eval(prompt("Temperatura : "));
+    
+                                document.write(temperatura + "°C");
+    
+                            </script>
+    
+                        </div>
+
+                    </div>
+
+                    <div class="umitempsit">
+
+                        <p>Umidade</p>
+
+                        <div class="umidade">
+
+                            <script>
+    
+                                var umidade = eval(prompt("Umidade : "));
+    
+                                document.write(umidade + "%");
+    
+                            </script>
+    
+                        </div>
+
+                    </div>
+
+                    <div class="umitempsit">
+
+                        <p>Situação</p>
+
+                        <div class="situacao">
+
+                            <script>
+
+                                if (((umidade >= 50) && (umidade <= 70)) && ((temperatura >= 20) && (temperatura <= 25))){
+                                    document.write("<img src='Imagens/ImagemFeliz.gif' alt='Feliz' width='230px' height='230px'>");
+                                }
+
+                                else if (((umidade >= 40) && (umidade <= 49)) || ((temperatura >= 18) && (temperatura <= 19)) || ((umidade >=71) && (umidade <=80)) || ((temperatura >=26) && (temperatura <=27))){
+                                    document.write("<img src='Imagens/ImagemNormal.gif' alt='Feliz' width='230px' height='230px'>");
+                                }
+
+                                else{
+                                    document.write("<img src='Imagens/ImagemTriste.gif' alt='Feliz' width='230px' height='230px'>");
+                                }
+
+                            </script>
+    
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+    
+</body>
+</html>
